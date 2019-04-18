@@ -7465,7 +7465,8 @@ font-weight: 700;
   display: none;
   z-index: 20 !important;
   position: absolute;
-  top: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   overflow: hidden;
   box-shadow: 0 15px 81px rgba(11, 59, 167, 0.25);
@@ -7531,6 +7532,13 @@ font-weight: 700;
   flex-direction: column;
   min-width: 190px;
   border-right: 1px solid rgba(196, 196, 196, .5);
+}
+.popular-countries__title {
+  margin-bottom: 20px;
+  color: #145ce6;
+  font-size: 13.83px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .countries-column:last-child {
   border: none;
@@ -7671,7 +7679,6 @@ font-weight: 700;
   overflow: hidden;
 }
 .opportunities-slider .slider-item {
-  background-image: url(../img/update/reklama.png);
   background-position: center;
   height: 140px;
   background-repeat: no-repeat;
@@ -7825,16 +7832,62 @@ font-weight: 700;
   position: relative;
   right: -118px;
   }
-.filter-block .date:hover img{/* opacity:0 */}	
+.filter-block .date:hover img{/* opacity:0 */}
 
+.hot-tours .nav-carts {
+	margin-top: 30px;
+}
+.hot-tours .nav-carts ul {
+  padding: 0;
+  width: 1000px;
+  margin: 0 auto;
+  max-width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.hot-tours .nav-carts__item {
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+  list-style-type: none;
+}
+.hot-tours .nav-carts__item a {
+  transition: .2s;
+	padding: 6px 14px;
+	border-radius: 14px;
+  background-color: #eaeaea;
+  color: #c4c4c4;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.05px;
+	text-align: center;
+	
+}
+.hot-tours .nav-carts__item a:hover {
+  color: #fff;
+  box-shadow: 6px 10px 13px rgba(253, 151, 4, 0.4);
+  border-radius: 14px;
+  background-color: #fd9704;
+}
 .hot-tours .carts {
   background-color: #f9f9fb;
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 33px
 }
-
+.hot-tours .carts .container {
+  padding-top: 6px;
+}
 .hot-tours .carts>.container>.row>div:nth-child(3n) .cart {
   margin-right: 33.33px
 }
@@ -10326,9 +10379,24 @@ footer .loc .loc-text .soc a:hover {
   color: #fff;
   font-weight: 500;
   margin-top: 15px;
-  margin-bottom: 30px
+  margin-bottom: 48px
 }
-
+.subscription {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+}
+.subscription-viber {
+  margin-right: 32px;
+}
 .minimum .form-block form input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, .5)
 }
@@ -10348,22 +10416,6 @@ footer .loc .loc-text .soc a:hover {
 .minimum .form-block form input::placeholder {
   color: rgba(255, 255, 255, .5)
 }
-.minimum .form-block form input[type=email],
-.minimum .form-block form input[type=text] {
-  border-width: 1px;
-  border-color: rgba(255, 255, 255, .5);
-  border-style: solid;
-  width: 245px;
-  height: 36px;
-  background-color: transparent;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  padding: 10px 20px;
-  margin-bottom: 28px
-}
 
 .minimum .form-block form input[type=submit] {
   background-color: #fd9704;
@@ -10380,7 +10432,7 @@ footer .loc .loc-text .soc a:hover {
   padding: 16px 48px;
   -webkit-border-radius: 23px;
   border-radius: 23px;
-  margin-top: 5px;
+  margin-top: 44px;
   cursor: pointer
 }
 
@@ -10768,6 +10820,9 @@ ymaps {border-radius:20px}
   padding: 20px 30px 22px 20px !important;
   border-radius: 15px;
   background-color: #ffffff;
+}
+.just-reviews__item p {
+  margin: 0;
 }
 .just-reviews__item-wrap {
   display: -webkit-flex;
