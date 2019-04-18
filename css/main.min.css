@@ -7474,6 +7474,14 @@ font-weight: 700;
   box-shadow: 0 15px 81px rgba(11, 59, 167, 0.25);
   border-radius: 20px;
   background-color: #ffffff;
+  width: max-content;
+  max-width: 100%;
+}
+.countries-header {
+  display: block !important;
+  left: 50%;
+  top: calc(100% - 500px);
+  transform: translateX(-50%);
 }
 .countries .title {
   padding: 0 40px;
@@ -11102,6 +11110,13 @@ text-align: center;
   .just-reviews {
     justify-content: space-around;
   } 
+  .countries-wrap {
+    justify-content: space-between;
+  }
+  .countries-column {
+
+    border: none !important;
+  }
   .minimum .slider .item {
       padding: 0 25px
 }
@@ -11582,12 +11597,15 @@ header .header-top .contacts .call {    font-size: 11.96px;}
     width: 100% !important;
   }
 }
-@media screen and (min-width:767.98px) and (max-width:959px) {
+@media screen and (min-width:767.98px) and (max-width:991.98px) {
   .advantages .row .col-lg-4:last-child {
     display: none !important;
   }
   .inst-reviews__item:nth-child(3) {
     display: none !important;
+  }
+  .inst-reviews {
+    justify-content: space-between !important;
   }
 }
 @media (max-width:575.98px) {
@@ -11921,6 +11939,9 @@ border-top-right-radius: 20px
 }
 
 @media (max-width:460px) {
+.countries-wrap {
+  justify-content: center;
+}
 .hotel .container .hotel-block .photos {
 display: -webkit-box;
 display: -webkit-flex;
