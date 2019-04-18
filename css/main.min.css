@@ -6971,7 +6971,7 @@ hr {
 }
 
 header.big {
-  height: 680px;
+  height: 522px;
   background-position: center
 }
 
@@ -7006,10 +7006,6 @@ header>.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 100%
 }
 
@@ -7019,14 +7015,16 @@ header .header-top {
   width: -webkit-calc(100% - 30px);
   width: calc(100% - 30px)
 }
-
+header .header-top_wrap {
+  justify-content: space-between;
+}
 header .header-top>.row {
   padding: 0
 }
-
 header .header-top .menu-resp {
   position: relative;
-  display: none
+  display: none;
+  height: 50px;
 }
 
 header .header-top .menu-resp ul {
@@ -7202,7 +7200,12 @@ header .header-top .contacts {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
+header .header-top .contacts a:hover {
+  opacity: .8;
+}
+header .text {
+  margin-top: 110px;
+}
 header .text hr {
   opacity: .4;
   width: 320px;
@@ -7210,12 +7213,12 @@ header .text hr {
   border: none;
   margin: 0;
   background-color: #fff;
-  margin-top: 20px;
-  margin-bottom: 20px
+  margin-top: 16px;
+  margin-bottom: 10px;
 }
 
 header .text .first span {
-font-size: 69px;
+  font-size: 65px;
   font-weight: 800;
   color: #fff;
   letter-spacing: 2px;
@@ -7465,8 +7468,7 @@ font-weight: 700;
   display: none;
   z-index: 20 !important;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: calc(100% + 10px);
   left: 0;
   overflow: hidden;
   box-shadow: 0 15px 81px rgba(11, 59, 167, 0.25);
@@ -10394,8 +10396,11 @@ footer .loc .loc-text .soc a:hover {
   flex-direction: row;
   justify-content: center;
 }
-.subscription-viber {
-  margin-right: 32px;
+.subscription a:hover {
+  opacity: .8;
+}
+.subscription-telegram {
+  margin-left: 32px;
 }
 .minimum .form-block form input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, .5)
@@ -10813,7 +10818,7 @@ ymaps {border-radius:20px}
 }
 .just-reviews__item {
   height: min-content;
-  margin-top: 50px;
+  margin-top: 20px;
   overflow: hidden;
   max-width: 334px;
   position: relative;
@@ -11309,8 +11314,16 @@ section.info .info-blocks {padding-bottom: 100px;}
 header .header-top .menu-resp {    background: #00000024;    position: fixed;
   right: 15px;
   z-index: 1000;}
-
-
+header .header-top_wrap {
+  justify-content: inherit !important;
+}
+header .header-top .logo {
+  margin-right: 20px;
+}
+header .header-top .contacts {
+  width: 128px !important;
+  margin-top: 25px
+}
 .result-overlay .result .result-count{    padding: 20px;
   color: #444;
   text-align: center;}
@@ -11567,6 +11580,14 @@ header .header-top .contacts .call {    font-size: 11.96px;}
     width: 100% !important;
   }
 }
+@media screen and (min-width:767.98px) and (max-width:959px) {
+  .advantages .row .col-lg-4:last-child {
+    display: none !important;
+  }
+  .inst-reviews__item:nth-child(3) {
+    display: none !important;
+  }
+}
 @media (max-width:575.98px) {
   .telegram .container .links {
     margin-left: 60px;
@@ -11645,9 +11666,6 @@ header .header-top .contacts .call {    font-size: 11.96px;}
 }
 header .text hr {
 width: 150px
-}
-header .header-top .contacts {
-margin-top: 25px
 }
 header .header-top .menu-resp ul {
 background-color: #145ce6d4
