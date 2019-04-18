@@ -6916,6 +6916,7 @@ body {
 }
 
 body {
+  z-index: 1;
   font-size: 16px;
   min-width: 320px;
   position: relative;
@@ -7461,9 +7462,10 @@ font-weight: 700;
 }
 
 .countries {
-  max-width: 100%;
   z-index: 20 !important;
   position: absolute;
+  top: calc(100% + 10px);
+left: 0;
   overflow: hidden;
   box-shadow: 0 15px 81px rgba(11, 59, 167, 0.25);
   border-radius: 20px;
@@ -7496,6 +7498,9 @@ font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.05px;
 }
+.countries-close {
+  cursor: pointer;
+}
 
 .countries-wrap {
   display: -webkit-flex;
@@ -7513,10 +7518,12 @@ font-weight: 700;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 40px 20px;
+  padding: 22px 20px 40px 20px;
 }
 
 .countries-column {
+  padding: 0 20px;
+  padding-top: 18px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -7528,7 +7535,6 @@ font-weight: 700;
   -o-flex-direction: column;
   flex-direction: column;
   min-width: 190px;
-  padding: 0 20px;
   border-right: 1px solid rgba(196, 196, 196, .5);
 }
 .countries-column:last-child {
@@ -7662,6 +7668,11 @@ font-weight: 700;
   position: relative;
 }
 .opportunities-slider {
+  -webkit-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
   max-width: 100%;
 }
 .opportunities-slider .slider-item {
