@@ -6984,7 +6984,7 @@ header.about {
 }
 
 header.main {
-  background-image: url(../img/update/main-fon.jpg);
+  background-image: url(../img/update/main-fon.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -7261,7 +7261,7 @@ header .text .third-about {
   box-shadow: 0 15px 81px 0 rgba(1, 1, 1, .05);
   background-color: #fff;
   position: relative;
-  top: -85px;
+  top: -125px;
   background-color: #fff
 }
 
@@ -7658,6 +7658,7 @@ font-weight: 700;
 .opportunities {
   background: url(../img/update/opp-fon.png) center center no-repeat;
   background-color: #f9f9fb;
+  margin-top: -75px;
 }
 .opportunities .container{
   position: relative;
@@ -7754,7 +7755,7 @@ font-weight: 700;
 }
 
 .opportunities .info-block {
-  margin-top: 65px !important;
+  margin-top: 80px !important;
   padding: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7815,6 +7816,7 @@ font-weight: 700;
 }
 
 .hot-tours {
+  margin-top: 45px;
   background-color: #f9f9fb;
 }
 
