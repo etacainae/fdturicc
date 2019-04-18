@@ -7636,7 +7636,8 @@ font-weight: 700;
 }
 
 .container.title .row .title {
-  font-size: 40.18px
+  font-size: 40.18px;
+  text-align: center;
 }
 
 .container.title .row .title .blue {
@@ -10809,6 +10810,7 @@ ymaps {border-radius:20px}
   letter-spacing: 1.05px;
 }
 .just-reviews {
+  margin-top: 40px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
