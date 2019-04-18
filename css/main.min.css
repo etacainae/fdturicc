@@ -7462,19 +7462,16 @@ font-weight: 700;
 }
 
 .countries {
+  display: none;
   z-index: 20 !important;
   position: absolute;
   top: calc(100% + 10px);
-left: 0;
+  left: 0;
   overflow: hidden;
   box-shadow: 0 15px 81px rgba(11, 59, 167, 0.25);
   border-radius: 20px;
   background-color: #ffffff;
 }
-.countries.hide {
-  display: none;
-}
-
 .countries .title {
   padding: 0 40px;
   display: -webkit-flex;
@@ -7489,7 +7486,6 @@ left: 0;
   height: 50px;
   background-color: #0b3ba7;
 }
-
 .countries .title span {
   line-height: 50px;
   color: #ffffff;
@@ -7501,7 +7497,6 @@ left: 0;
 .countries-close {
   cursor: pointer;
 }
-
 .countries-wrap {
   display: -webkit-flex;
   display: -moz-flex;
@@ -7673,7 +7668,6 @@ left: 0;
   -webkit-border-bottom-right-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
-  max-width: 100%;
 }
 .opportunities-slider .slider-item {
   background-image: url(../img/update/reklama.png);
@@ -7821,7 +7815,7 @@ left: 0;
 }
 
 .hot-tours {
-  background-color: #f9f9fb
+  background-color: #f9f9fb;
 }
 
 .cal1 {    margin-left: -33px;}
@@ -8005,9 +7999,9 @@ left: 0;
 }
 
 .hot-tours .carts .cart-big .hide-price {
+  z-index: -2;
   cursor: default;
   padding: 0 14px;
-  z-index: 3;
   position: absolute;
   top: 280px;
   left: 17px;
@@ -8049,6 +8043,7 @@ left: 0;
 }
 
 .hot-tours .carts .cart-big .description .btn-price:hover + .hide-price {
+  z-index: 1; 
   opacity: 1 !important;
   -webkit-transition: all .25s ease;
   -o-transition: all .25s ease;
@@ -8190,7 +8185,7 @@ left: 0;
 .hot-tours .carts .cart .hide-price {
   cursor: default;
   padding: 0 14px;
-  z-index: 3;
+  z-index: -2;
   position: absolute;
   top: 190px;
   opacity: 0;
@@ -8231,6 +8226,7 @@ left: 0;
 }
 
 .hot-tours .carts .cart .main-img .price:hover + .hide-price {
+  z-index: 1;
   opacity: 1 !important;
   -webkit-transition: all .25s ease;
   -o-transition: all .25s ease;
@@ -10782,6 +10778,7 @@ ymaps {border-radius:20px}
   -ms-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
+  justify-content: space-between;
 }
 .just-reviews__item-big {
   box-shadow: 0 15px 81px rgba(1, 1, 1, 0.1);
@@ -11935,7 +11932,14 @@ header .text .second-about {
 font-size: 7px
 }
 }
-
+@media (max-width:400px) {
+.hot-tours .carts .cart .hide-price {
+top: 246px;
+}
+.hot-tours .carts .cart-big .hide-price {
+top: 274px;
+}
+}
 @media (max-width:330px) {
 .hotel .container .hotel-block .hotel-info .block-info:nth-child(2)>div:last-child {
 margin-right: 0
@@ -13072,4 +13076,17 @@ div#call {
 
 .row.no-gutters.justify-content-between.slick-initialized.slick-slider {
   position:relative
+}
+.overlay {
+width: 100%;
+height: 100vh;
+min-height: 100vh;
+position: fixed;
+top: 0;
+right: 0;
+background-color: rgba(11, 59, 167, 0.3);
+z-index: 1;
+padding: 50px 0;
+overflow: auto;
+display: none;
 }
