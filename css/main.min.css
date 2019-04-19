@@ -7193,6 +7193,9 @@ header .header-top .contacts {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+header .header-top .contacts img {
+  height: 26px;
+}
 header .header-top .contacts a:hover {
   opacity: .8;
 }
@@ -10937,15 +10940,32 @@ text-align: center;
 }
 
 @media (max-width:1199.98px) {
-  .minimum .slider .item {
-      padding: 0 25px
-}
-  .minimum .slider .item .text .country {
-      padding-left: 25px
-}
-  .minimum .slider .item .text .item-price {
-      padding-left: 25px
-}
+  .inst-reviews {
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+    }
+    .just-reviews {
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+    } 
+    .countries-wrap {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+    }
+    .countries-column {
+
+      border: none !important;
+    }
+    .minimum .slider .item {
+        padding: 0 25px
+  }
+    .minimum .slider .item .text .country {
+        padding-left: 25px
+  }
+    .minimum .slider .item .text .item-price {
+        padding-left: 25px
+  }
   header .header-top .menu ul {
       margin: 0 30px
 }
@@ -11398,6 +11418,32 @@ header .header-top .contacts .call {    font-size: 11.96px;}
 }
 }
 
+@media screen and (min-width:767.98px) and (max-width:1199.98px) {
+  .just-reviews__item-mobile {
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100% !important;
+  }
+}
+@media screen and (min-width:767.98px) and (max-width:991.98px) {
+  .advantages .row .col-lg-4:last-child {
+    display: none !important;
+  }
+  .inst-reviews__item:nth-child(3) {
+    display: none !important;
+  }
+  .inst-reviews {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+}
 @media (max-width:575.98px) {
   .telegram .container .links {
     margin-left: 60px;
@@ -11732,6 +11778,11 @@ border-top-right-radius: 20px
 }
 
 @media (max-width:460px) {
+.countries-wrap {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .hotel .container .hotel-block .photos {
 display: -webkit-box;
 display: -webkit-flex;
@@ -11811,7 +11862,14 @@ header .text .second-about {
 font-size: 8px
 }
 }
-
+@media (max-width:400px) {
+.hot-tours .carts .cart .hide-price {
+top: 246px;
+}
+.hot-tours .carts .cart-big .hide-price {
+top: 274px;
+}
+}
 @media (max-width:360px) {
 .extended-info .tabs #tab-3 .form .round label span.check {
 width: 32px
@@ -12170,7 +12228,46 @@ padding-top: 15px;
 	padding-right: 25px;
 }
 
+.result-item .image-wrap {
+  border-top-left-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.result-item .discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 20px 0;
+  -webkit-box-shadow: 0 11px 32px rgba(253, 151, 4, 0.4);
+          box-shadow: 0 11px 32px rgba(253, 151, 4, 0.4);
+  background-color: #fd9704;
+  padding: 13px 14px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1.35px;
+}
+.result-item .best-price {
+  position: absolute;
+  bottom: 0;
+  background-color: #fd9704;
+  width: 100%;
+  height: 30px;
+  -webkit-box-shadow: 0 15px 81px rgba(1, 1, 1, 0.1);
+          box-shadow: 0 15px 81px rgba(1, 1, 1, 0.1);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.05px;
+  line-height: 30px;
+  text-align: center;
+}
 
+.result-item .best-price img {
+  margin-right: 30px;
+  padding-bottom: 4px;
+}
 .result-item {
 padding: 28px 40px;
 }
@@ -12583,6 +12680,16 @@ max-width: 100%;
 }
 }
 @media (max-width: 767.98px) {
+header.big {
+  height: 400px;
+}
+header .header-top_wrap {
+  justify-content: inherit !important;
+}
+header .header-top .contacts {
+  width: 120px;
+  margin-left: 30px;
+}
 .count-stars, .count-tourists {text-align: center;}
 .count-stars > .row, .count-tourists > .row {justify-content: center;}
 .count-stars {margin-top: 10px;}
